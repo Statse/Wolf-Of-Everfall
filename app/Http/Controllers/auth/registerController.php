@@ -28,7 +28,7 @@ class registerController extends Controller
             'password' => Hash::$request-'password',
         ]);
 
-        auth()->user(); //User
+        auth()->attempt($request->only('email', 'password')); //User
 
         return redirect()->route('dashboard');
     }
