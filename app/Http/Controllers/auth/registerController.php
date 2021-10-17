@@ -12,8 +12,16 @@ class registerController extends Controller
         return view("auth.register");
     }
 
-    public function store()
+    public function store(Request $request)
     {
+
+        $name = $request->get('name');
+        $userName = $request->get('username');
+        $email = $request->get('email');
+        $password = $request->get('password');
+
+        
+        dd($email);
         //validate
         //store
         //sign in
