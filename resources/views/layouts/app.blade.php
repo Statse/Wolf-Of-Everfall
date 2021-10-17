@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <title>Posty</title>
+    <title>New world market tracker</title>
 </head>
     
-<body class="bg-gray-100">
+<body class="bg-gray-200">
     <nav class="p-6 bg-white flex justify-between">
         <ul class="flex items-center">
             <li><a href="" class="p-3">Home</a></li>
