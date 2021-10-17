@@ -14,6 +14,12 @@ class registerController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'name'=>'required|max:255',
+            'username'=>'required|max:255',
+            'email'=>'required|email|max:255',
+            'password'=>'required|confirmed',
+        ]);
 
         $name = $request->get('name');
         $userName = $request->get('username');
@@ -21,7 +27,6 @@ class registerController extends Controller
         $password = $request->get('password');
 
         
-        dd($email);
         //validate
         //store
         //sign in
