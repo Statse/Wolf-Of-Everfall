@@ -14,6 +14,9 @@ class registerController extends Controller
 
     public function store()
     {
-        dd('abc');
+        //validate
+        //store
+        //sign in
+        //redirect
     }
 }
