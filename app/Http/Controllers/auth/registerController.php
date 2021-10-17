@@ -25,7 +25,7 @@ class registerController extends Controller
             'name' => $request-'name',
             'email' => $request-'email',
             'username' => $request-'username',
-            'password' => $request-'password',
+            'password' => Hash::$request-'password',
         ]);
     }
 }
