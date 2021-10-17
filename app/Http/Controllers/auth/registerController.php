@@ -21,9 +21,11 @@ class registerController extends Controller
             'password'=>'required|confirmed',
         ]);
 
-        $name = $request->get('name');
-        $userName = $request->get('username');
-        $email = $request->get('email');
-        $password = $request->get('password');
+        User::create([
+            'name' => $request-'name',
+            'email' => $request-'email',
+            'username' => $request-'username',
+            'password' => $request-'password',
+        ]);
     }
 }
