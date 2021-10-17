@@ -25,11 +25,5 @@ class registerController extends Controller
         $userName = $request->get('username');
         $email = $request->get('email');
         $password = $request->get('password');
-
-        
-        //validate
-        //store
-        //sign in
-        //redirect
     }
 }
