@@ -28,6 +28,8 @@ class registerController extends Controller
             'password' => Hash::$request-'password',
         ]);
 
+        auth()->user(); //User
+
         return redirect()->route('dashboard');
     }
 }
