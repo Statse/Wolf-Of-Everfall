@@ -27,5 +27,7 @@ class registerController extends Controller
             'username' => $request-'username',
             'password' => Hash::$request-'password',
         ]);
+
+        return redirect()->route('dashboard');
     }
 }
