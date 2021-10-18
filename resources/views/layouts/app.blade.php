@@ -19,9 +19,9 @@
             @if (auth()->user())
                 <li><a href="" class="p-3">Name</a></li>
                 <li>
-                    <form action="{{route('logout')}}" method="post">
+                    <form action="{{route('logout')}}" method="post" class="p-3 inline">
                         @csrf
-                        <button class="p-3">Logout</button>
+                        <button>Logout</button>
                     </form>
                     {{-- <a href="{{route('logout')}}" class="p-3">Logout</a> --}}
                 </li>
