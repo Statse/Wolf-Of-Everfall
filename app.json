@@ -1,0 +1,10 @@
+{
+    "environments": {
+      "staging": {
+        "scripts": {
+          "build": "npm run production",
+          "prod": "npm run prod"
+        }
+      }
+    }
+  }
