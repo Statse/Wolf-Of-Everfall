@@ -9,7 +9,7 @@
                 </div>
 
                 @if (session('status'))
-                    {{session('status')}}
+                    <div class="text-red-500 mt-2 text-sm p-6 bg-gray-100 rounded-lg mb-4">{{session('status')}}</div>
                 @endif
 
                 <form action="{{route('login')}}") method="post">
