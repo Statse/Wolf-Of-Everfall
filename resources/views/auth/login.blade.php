@@ -8,8 +8,8 @@
                     <h1 class="w-full font-medium">Login</h1>
                 </div>
 
-                @if  (session('status'))
-                    <div class="text-red-500 mt-2 text-sm">{{session('status')}}</div>
+                @if (session('status'))
+                    {{session('status')}}
                 @endif
 
                 <form action="{{route('login')}}") method="post">
