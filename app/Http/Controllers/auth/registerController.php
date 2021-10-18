@@ -18,10 +18,8 @@ class RegisterController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name'=>'required|max:255',
-            'username'=>'required|max:255',
             'email'=>'required|email|max:255',
-            'password'=>'required|confirmed',
+            'password'=>'required',
         ]);
 
         User::create([
@@ -32,7 +30,7 @@ class RegisterController extends Controller
         ]);
 
         $authenticated = auth()->attempt($request->only('email', 'password'));
-        
+
         if ($authenticated) {
             return redirect()->intended('dashboard');
         } else {
