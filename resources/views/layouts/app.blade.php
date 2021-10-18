@@ -18,7 +18,13 @@
         <ul class="flex items-center">
             @if (auth()->user())
                 <li><a href="" class="p-3">Name</a></li>
-                <li><a href="{{route('logout')}}" class="p-3">Logout</a></li>
+                <li>
+                    <form action="{{route('logout')}}" method="post">
+                        @csrf
+                        <button class="p-3">Logout</button>
+                    </form>
+                    {{-- <a href="{{route('logout')}}" class="p-3">Logout</a> --}}
+                </li>
             @else 
                 <li><a href="{{route('login')}}" class="p-3">Login</a></li>
                 <li><a href="{{route('register')}}" class="p-3">Register</a></li>
