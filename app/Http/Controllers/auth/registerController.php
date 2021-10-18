@@ -32,11 +32,11 @@ class RegisterController extends Controller
         ]);
 
         $authenticated = auth()->attempt($request->only('email', 'password'));
-
+        
         if ($authenticated) {
             return redirect()->intended('dashboard');
         } else {
-            return redirect()->intended('register');
+            return redirect()->intended('login');
         }
     }
 }
