@@ -15,8 +15,8 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-Route::get('/posts', function () {
-    return view('posts.index');
+Route::get('/', function () {
+    return view('index');
 });
 
 
