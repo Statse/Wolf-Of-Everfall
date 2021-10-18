@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\auth;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+
+use App\Models\User;
+use App\Http\Controllers\Controller;
 
 class RegisterController extends Controller
 {
@@ -22,14 +25,18 @@ class RegisterController extends Controller
         ]);
 
         User::create([
-            'name' => $request-'name',
-            'email' => $request-'email',
-            'username' => $request-'username',
-            'password' => Hash::$request-'password',
+            'name' => $request->name,
+            'email' => $request->email,
+            'username' => $request->username,
+            'password' => Hash::make($request->password),
         ]);
 
-        auth()->attempt($request->only('email', 'password')); //User
+        $authenticated = auth()->attempt($request->only('email', 'password'));
 
-        return redirect()->route('dashboard');
+        if ($authenticated) {
+            return redirect()->intended('dashboard');
+        } else {
+            return redirect()->intended('register');
+        }
     }
 }
