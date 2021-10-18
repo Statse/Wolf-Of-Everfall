@@ -15,6 +15,10 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
+Route::get('/posts', function () {
+    return view('posts.index');
+});
+
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
