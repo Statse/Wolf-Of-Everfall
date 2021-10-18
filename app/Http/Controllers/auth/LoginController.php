@@ -15,11 +15,11 @@ class LoginController extends Controller
     public function store(Request $request)
     {
         $authenticated = auth()->attempt($request->only('email', 'password'));
-
+    
         if ($authenticated) {
-            return redirect()->intended('dashboard');
+            return redirect()->route('dashboard');
         } else {
-            return redirect()->intended('login');
+            return back()->with("status", "invalid login details");
         }
     }
 }

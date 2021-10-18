@@ -5,9 +5,9 @@
         <div class="flex justify-center">
             <div class="w-8/12 bg-white p-6 rounded-lg">
                 <div class="mb-4">
-                    <h1 class="w-full font-medium">Register</h1>
+                    <h1 class="w-full font-medium">Login</h1>
                 </div>
-                <form action="{{route('register')}}") method="post">
+                <form action="{{route('login')}}") method="post">
                     @csrf
                     <div class="mb-4">
                         <label for="email" class="sr-only">Email</label>
@@ -24,7 +24,7 @@
                         @enderror
                     </div>
                     <div class="mb-4">
-                        <button type="submit" class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">Register</button>
+                        <button type="submit" class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">Login</button>
                     </div>
                 </form>
             </div>
