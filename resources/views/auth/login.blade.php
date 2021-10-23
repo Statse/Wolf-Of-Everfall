@@ -23,6 +23,10 @@
                         <input type="password" id="password" name="password" class="bg-gray-100 border-2 w-full p-4 rounded-lg"value="" placeholder="Your password">
                     </div>
                     <div class="mb-4">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <div class="mb-4">
                         <button type="submit" class="bg-blue-500 text-white px-4 py-3 rounded font-medium w-full">Login</button>
                     </div>
                 </form>
