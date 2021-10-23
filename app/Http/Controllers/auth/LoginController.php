@@ -18,7 +18,7 @@ class LoginController extends Controller
 
     public function store(Request $request)
     {
-        $authenticated = auth()->attempt($request->only('email', 'password'));
+        $authenticated = auth()->attempt($request->only('email', 'password'), $request->remember);
     
         if ($authenticated) {
             return redirect()->route('dashboard');
