@@ -7,7 +7,7 @@ use App\User;
 
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class ItemsController extends Controller
 {
     public function __construct()
     {
@@ -16,7 +16,11 @@ class DashboardController extends Controller
 
     public function index() 
     {
-        return view("dashboard");
+        return view('items.index');
     }
-    
+
+    public function store()
+    {
+
+    }
 }

@@ -13,7 +13,9 @@
         <ul class="flex items-center">
             <li><a href="" class="p-3">Home</a></li>
             <li><a href="" class="p-3">Dash</a></li>
-            <li><a href="" class="p-3">Post</a></li>
+            <li>
+                <a href="{{route('items')}}" class="p-3">Items</a>
+            </li>
         </ul>
         <ul class="flex items-center">
             @if (auth()->user())
