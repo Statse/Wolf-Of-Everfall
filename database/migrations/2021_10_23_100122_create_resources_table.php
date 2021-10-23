@@ -14,10 +14,11 @@ class CreateResourcesTable extends Migration
     public function up()
     {
         Schema::create('resources', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->string('name');
             $table->float('current_price', 12, 2);
             $table->integer('tier');
+            $table->timestamps();
         });
     }
 
