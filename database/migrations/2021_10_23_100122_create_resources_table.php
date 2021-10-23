@@ -15,7 +15,9 @@ class CreateResourcesTable extends Migration
     {
         Schema::create('resources', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->float('current_price', 12, 2);
+            $table->integer('tier');
         });
     }
 
