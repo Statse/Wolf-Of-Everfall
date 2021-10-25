@@ -23,6 +23,6 @@ class PricesController extends Controller
 
     public function store(Request $request)
     {
-        dd('ok');
+        dd($request);
     }
 }
