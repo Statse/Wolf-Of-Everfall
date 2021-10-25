@@ -13,11 +13,17 @@ class CreatePrices extends Migration
      */
     public function up()
     {
+        
+        // $table->integer('item_id');
         Schema::create('prices', function (Blueprint $table) {
-            $table->id()->primary();
-            $table->foreign('item_id')->references('id')->on('resources');
+            $table->id();
+            $table->integer('item_id')->unsigned();
             $table->float('price', 12, 2);
             $table->timestamps();
+        });
+
+        Schema::table('prices', function($table) {
+            $table->foreign('item_id')->references('id')->on('resources');
         });
     }
 

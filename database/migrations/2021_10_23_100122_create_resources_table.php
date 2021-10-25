@@ -14,18 +14,18 @@ class CreateResourcesTable extends Migration
     public function up()
     {
         Schema::create('resources', function (Blueprint $table) {
-            $table->id('id')->primary();
+            $table->increments('id');
             $table->string('name');
             $table->integer('tier');
-            $table->id('slot_1');
+            $table->json('slot_1');
             $table->integer('slot_1_amount');
-            $table->id('slot_2');
+            $table->json('slot_2');
             $table->integer('slot_2_amount');
-            $table->id('slot_3');
+            $table->json('slot_3');
             $table->integer('slot_3_amount');
-            $table->id('slot_4');
+            $table->json('slot_4');
             $table->integer('slot_4_amount');
-            $table->id('slot_5');
+            $table->json('slot_5');
             $table->integer('slot_5_amount');
             $table->timestamps();
         });
