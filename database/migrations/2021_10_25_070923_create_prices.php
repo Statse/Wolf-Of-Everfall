@@ -18,6 +18,7 @@ class CreatePrices extends Migration
         Schema::create('prices', function (Blueprint $table) {
             $table->id();
             $table->integer('item_id')->unsigned();
+            $table->string('city');
             $table->float('price', 12, 2);
             $table->timestamps();
         });
