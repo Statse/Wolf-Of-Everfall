@@ -16,7 +16,6 @@ class Resource extends Model
      */
     protected $fillable = [
         'name',
-        'current_price',
         'tier',
     ];
 }
