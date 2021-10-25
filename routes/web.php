@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ItemsController;
+use App\Http\Controllers\PricesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +39,5 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/items', [ItemsController::class, 'index'])->name('items');
 Route::post('/items', [ItemsController::class, 'store']);
 
+Route::get('/prices', [PricesController::class, 'index'])->name('prices');
+Route::post('/prices', [PricesController::class, 'store']);

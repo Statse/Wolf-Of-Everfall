@@ -12,7 +12,9 @@
     <nav class="p-6 bg-white flex justify-between">
         <ul class="flex items-center">
             <li><a href="" class="p-3">Home</a></li>
-            <li><a href="" class="p-3">Dash</a></li>
+            <li>
+                <a href="{{route('prices')}}"  class="p-3">Prices</a>
+            </li>
             <li>
                 <a href="{{route('items')}}" class="p-3">Items</a>
             </li>
