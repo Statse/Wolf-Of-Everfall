@@ -17,7 +17,6 @@ class CreateResourcesTable extends Migration
             $table->increments('id');
             $table->string('name')->unique();
             $table->integer('tier')->nullable();
-            $table->integer('category_id')->unsigned();
             $table->json('slot_1')->nullable();
             $table->integer('slot_1_amount')->nullable();
             $table->json('slot_2')->nullable();
