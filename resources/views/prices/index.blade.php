@@ -7,20 +7,23 @@
             <div class="mb-4">
                 <h1 class="w-full font-medium">Save item price</h1>
             </div>
-           <form action="{{route('items')}}" method="post">
+           <form action="{{route('prices')}}" method="post">
                 @csrf
                 <div class="mb-4">
-                    <label for="price" class="sr-only">Price</label>
-                    <select class="bg-gray-100 border-2 w-full p-4 rounded-lg" name="resource" required id="resource">
+                    <select class="bg-gray-100 border-2 w-full p-4 rounded-lg" name="item_id" required id="item_id">
                         <option value="option_select" disabled selected>Resource</option>
                         @foreach($resources as $resource)
                             <option value="{{ $resource->id }}">{{ $resource->name}}</option>
                         @endforeach
+                        @error('item_id')
+                            <div class="text-red-500 mt-2 text-sm">{{$message}}</div>
+                        @enderror
                     </select>
                 </div>
                 <div class="mb-4">
-                    <input id="price" type="number" class="bg-gray-100 border-2 w-full p-4 rounded-lg" placeholder="Price">
-                    @error('name')
+                    <label for="price" class="sr-only">Price</label>
+                    <input id="price" name="price" step=".01" type="number" class="bg-gray-100 border-2 w-full p-4 rounded-lg" placeholder="Price">
+                    @error('price')
                         <div class="text-red-500 mt-2 text-sm">{{$message}}</div>
                     @enderror
                 </div>

@@ -23,6 +23,18 @@ class PricesController extends Controller
 
     public function store(Request $request)
     {
-        dd($request);
+        $this->validate($request, [
+            'item_id'=>'required',
+            'price'=>'required',
+        ]);
+
+        DB::table('prices')->insertGetId(
+            array(
+                'item_id' => $request->item_id,
+                'price' => $request->price,
+            )
+            );
+
+        return back();
     }
 }
