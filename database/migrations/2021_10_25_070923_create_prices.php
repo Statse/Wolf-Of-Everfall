@@ -19,6 +19,7 @@ class CreatePrices extends Migration
             $table->id();
             $table->integer('item_id')->unsigned();
             $table->integer('user_id')->unsigned();
+            $table->string('server');
             $table->string('city');
             $table->float('price', 12, 2);
             $table->timestamps();

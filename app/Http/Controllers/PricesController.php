@@ -27,13 +27,16 @@ class PricesController extends Controller
         $this->validate($request, [
             'item_id'=>'required',
             'price'=>'required',
+            'city' => 'required',
         ]);
 
         DB::table('prices')->insertGetId(
             array(
                 'item_id' => $request->item_id,
                 'price' => $request->price,
+                'city' => $request->city,
                 'user_id' => auth()->id(),
+                'server' => 'Kalevala',
                 'created_at' => DB::raw('CURRENT_TIMESTAMP'),
                 'updated_at' => DB::raw('CURRENT_TIMESTAMP'),
             )
