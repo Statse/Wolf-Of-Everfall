@@ -32,6 +32,8 @@ class PricesController extends Controller
             array(
                 'item_id' => $request->item_id,
                 'price' => $request->price,
+                'created_at' => DB::raw('CURRENT_TIMESTAMP'),
+                'updated_at' => DB::raw('CURRENT_TIMESTAMP'),
             )
             );
 
