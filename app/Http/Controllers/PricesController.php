@@ -23,6 +23,7 @@ class PricesController extends Controller
 
     public function store(Request $request)
     {
+
         $this->validate($request, [
             'item_id'=>'required',
             'price'=>'required',
@@ -32,10 +33,11 @@ class PricesController extends Controller
             array(
                 'item_id' => $request->item_id,
                 'price' => $request->price,
+                'user_id' => auth()->id(),
                 'created_at' => DB::raw('CURRENT_TIMESTAMP'),
                 'updated_at' => DB::raw('CURRENT_TIMESTAMP'),
             )
-            );
+        );
 
         return back();
     }
