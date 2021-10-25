@@ -15,18 +15,19 @@ class CreateResourcesTable extends Migration
     {
         Schema::create('resources', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->integer('tier');
-            $table->json('slot_1');
-            $table->integer('slot_1_amount');
-            $table->json('slot_2');
-            $table->integer('slot_2_amount');
-            $table->json('slot_3');
-            $table->integer('slot_3_amount');
-            $table->json('slot_4');
-            $table->integer('slot_4_amount');
-            $table->json('slot_5');
-            $table->integer('slot_5_amount');
+            $table->string('name')->unique();
+            $table->integer('tier')->nullable();
+            $table->integer('category_id')->unsigned();
+            $table->json('slot_1')->nullable();
+            $table->integer('slot_1_amount')->nullable();
+            $table->json('slot_2')->nullable();
+            $table->integer('slot_2_amount')->nullable();
+            $table->json('slot_3')->nullable();
+            $table->integer('slot_3_amount')->nullable();
+            $table->json('slot_4')->nullable();
+            $table->integer('slot_4_amount')->nullable();
+            $table->json('slot_5')->nullable();
+            $table->integer('slot_5_amount')->nullable();
             $table->timestamps();
         });
     }
