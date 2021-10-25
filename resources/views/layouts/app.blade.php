@@ -13,7 +13,7 @@
         <ul class="flex items-center">
             <li><a href="" class="p-3">Home</a></li>
             <li>
-                <a href="{{route('prices')}}"  class="p-3">Resources</a>
+                <a href="{{route('resources')}}"  class="p-3">Resources</a>
             </li>
             @if (auth()->user())
             <li>

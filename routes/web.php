@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ItemsController;
 use App\Http\Controllers\PricesController;
+use App\Http\Controllers\ResourcesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,7 @@ Route::post('/items', [ItemsController::class, 'store']);
 
 Route::get('/prices', [PricesController::class, 'index'])->name('prices');
 Route::post('/prices', [PricesController::class, 'store']);
+
+Route::get('/resources', [ResourcesController::class, 'index'])->name('resources');
+// Route::post('/resources', [ResourcesController::class, 'store']);
+
