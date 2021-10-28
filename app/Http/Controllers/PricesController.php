@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Models\Resource;
 use DB;
 
 use Illuminate\Http\Request;
@@ -16,7 +17,10 @@ class PricesController extends Controller
 
     public function index() 
     {
-        $resources = DB::table('resources')->get();
+        // $resources = DB::table('resources')->get();
+        
+        $resources = Resource::all();
+        
 
         return view('prices.index', ['resources'=>$resources]);
     }
