@@ -10,8 +10,7 @@ class ResourcesController extends Controller
     public function index() 
     {
         $resources = Resource::all();
-        //DB::table('resources')->get();
-
+        
         return view('resources.index', ['resources'=>$resources]);
     }
 }

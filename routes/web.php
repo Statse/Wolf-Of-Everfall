@@ -47,5 +47,5 @@ Route::post('/prices', [PricesController::class, 'store']);
 Route::get('/resources', [ResourcesController::class, 'index'])->name('resources');
 // Route::post('/resources', [ResourcesController::class, 'store']);
 
-Route::get('/resource/{id}', [ResourceController::class, 'index'])->name('Resource');
+Route::get('/resource/{id}', [ResourceController::class, 'index'])->name('resource');
 

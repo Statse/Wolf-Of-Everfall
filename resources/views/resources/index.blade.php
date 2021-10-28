@@ -15,10 +15,8 @@
                 <tbody>
                 @foreach($resources as $resource)
                         <tr id="{{ $resource->id }}">
-                            <a href="">
-                                <td> {{$resource->name}} </td>
-                                <td> {{$resource->tier}} </td>
-                            </a>
+                            <td><a href="{{route('resource', ['id' => $resource->id]);}}">{{$resource->name}} </a></td>
+                            <td> {{$resource->tier}} </td>
                         </tr>
                 @endforeach
                 </tbody>
