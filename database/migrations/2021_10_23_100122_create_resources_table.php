@@ -22,6 +22,7 @@ class CreateResourcesTable extends Migration
             $table->json('slot_3')->nullable();
             $table->json('slot_4')->nullable();
             $table->json('slot_5')->nullable();
+            $table->longText('img_url')->nullable();
             $table->timestamps();
         });
     }
