@@ -127,168 +127,360 @@ class ResourceSeeder extends Seeder
             [
                 'name' => 'Iron Logging Axe', 
                 'tier' => 2,
-                'slot_1' => json_encode(array('Fae Iron','Iron ingot')),
-                'slot_1_amount' => 12,
-                'slot_2' => json_encode($refinedWoods),
-                'slot_2_amount' => 3,
-                'slot_3' => json_encode($hides),
-                'slot_3_amount' => 2,
+                'slot_1' => json_encode(
+                    array(
+                        "ingredients" => array('Fae Iron','Iron ingot'),
+                        "amount" => 12,
+                        )
+                ),
+                'slot_2' => json_encode(
+                    array(
+                        "ingredients" => array($refinedWoods),
+                        "amount" => 3
+                    )
+                ),
+                'slot_3' => json_encode(
+                    array(
+                        "ingredients" => array($hides),
+                        "amount" => 2
+                    )
+                ),
             ],
             [
                 'name' => 'Steel Logging Axe', 
                 'tier' => 3,
-                'slot_1' => json_encode(array('Steel Ingot', 'Voidmetal')),
-                'slot_1_amount' => 13,
-                'slot_2' => json_encode($refinedWoods),
-                'slot_2_amount' => 3,
-                'slot_3' => json_encode($hides),
-                'slot_3_amount' => 2,
+                'slot_1' => json_encode(
+                    array(
+                        "ingredients" => array('Steel Ingot', 'Voidmetal'),
+                        "amount" => 13
+                    )
+                ),
+                'slot_2' => json_encode(
+                    array(
+                        "ingredients" => $refinedWoods,
+                        "amount" => 3
+                    )
+                ),
+                'slot_3' => json_encode(
+                    array(
+                        "ingredients" => array($hides),
+                        "amount" => 2
+                    )
+                ),
             ],
             [
                 'name' => 'Starmetal Logging Axe', 
                 'tier' => 3,
-                'slot_1' => json_encode(array('Starmetal Ingot', 'Azurite Chunk')),
-                'slot_1_amount' => 14,
-                'slot_2' => json_encode($refinedWoods),
-                'slot_2_amount' => 3,
-                'slot_3' => json_encode($hides),
-                'slot_3_amount' => 2,
+                'slot_1' => json_encode(
+                    array(
+                        "ingredients" => array('Starmetal Ingot', 'Azurite Chunk'),
+                        "amount" => 14
+                    )
+                ),
+                'slot_2' => json_encode(
+                    array(
+                        "ingredients" => array($refinedWoods),
+                        "amount" => 3
+                    )
+                ),
+                'slot_3' => json_encode(
+                    array(
+                        "ingredients" => array($hides),
+                        "amount" => 2
+                    )
+                ),
             ],
             [
                 'name' => 'Orichalcum Logging Axe', 
                 'tier' => 3,
-                'slot_1' => json_encode(array('Orichalcum Ingot', 'Cinnbar')),
-                'slot_1_amount' => 15,
-                'slot_2' => json_encode($refinedWoods),
-                'slot_2_amount' => 3,
-                'slot_3' => json_encode($hides),
-                'slot_3_amount' => 2,
+                'slot_1' => json_encode(
+                    array(
+                        "ingredients" => array('Orichalcum Ingot', 'Cinnbar'),
+                        "amount" => 15
+                    )
+                ),
+                'slot_2' => json_encode(
+                    array(
+                        "ingredients" => array($refinedWoods),
+                        "amount" => 3
+                    )
+                ),
+                'slot_3' => json_encode(
+                    array(
+                        "ingredients" => array($hides),
+                        "amount" => 2
+                    )
+                ),
             ],
 
              // Pickaxes
              [
                 'name' => 'Iron Mining Pickaxe', 
                 'tier' => 2,
-                'slot_1' => json_encode(array('Fae Iron','Iron ingot')),
-                'slot_1_amount' => 12,
-                'slot_2' => json_encode($refinedWoods),
-                'slot_2_amount' => 3,
-                'slot_3' => json_encode($hides),
-                'slot_3_amount' => 2,
+                'slot_1' => json_encode(
+                    array(
+                        "ingredients" => array('Fae Iron','Iron ingot'),
+                        "amount" => 12,
+                        )
+                ),
+                'slot_2' => json_encode(
+                    array(
+                        "ingredients" => array($refinedWoods),
+                        "amount" => 3
+                    )
+                ),
+                'slot_3' => json_encode(
+                    array(
+                        "ingredients" => array($hides),
+                        "amount" => 2
+                    )
+                ),
             ],
             [
                 'name' => 'Steel Mining Pickaxe', 
                 'tier' => 3,
-                'slot_1' => json_encode(array('Steel Ingot', 'Voidmetal')),
-                'slot_1_amount' => 13,
-                'slot_2' => json_encode($refinedWoods),
-                'slot_2_amount' => 3,
-                'slot_3' => json_encode($hides),
-                'slot_3_amount' => 2,
+                'slot_1' => json_encode(
+                    array(
+                        "ingredients" => array('Steel Ingot', 'Voidmetal'),
+                        "amount" => 13
+                    )
+                ),
+                'slot_2' => json_encode(
+                    array(
+                        "ingredients" => array($refinedWoods),
+                        "amount" => 3
+                    )
+                ),
+                'slot_3' => json_encode(
+                    array(
+                        "ingredients" => array($hides),
+                        "amount" => 2
+                    )
+                ),
             ],
             [
                 'name' => 'Starmetal Mining Pickaxe', 
                 'tier' => 3,
-                'slot_1' => json_encode(array('Starmetal Ingot', 'Azurite Chunk')),
-                'slot_1_amount' => 14,
-                'slot_2' => json_encode($refinedWoods),
-                'slot_2_amount' => 3,
-                'slot_3' => json_encode($hides),
-                'slot_3_amount' => 2,
+                'slot_1' => json_encode(
+                    array(
+                        "ingredients" => array('Starmetal Ingot', 'Azurite Chunk'),
+                        "amount" => 14
+                    )
+                ),
+                'slot_2' => json_encode(
+                    array(
+                        "ingredients" => array($refinedWoods),
+                        "amount" => 3
+                    )
+                ),
+                'slot_3' => json_encode(
+                    array(
+                        "ingredients" => array($hides),
+                        "amount" => 2
+                    )
+                ),
             ],
             [
                 'name' => 'Orichalcum Mining Pickaxe', 
                 'tier' => 3,
-                'slot_1' => json_encode(array('Orichalcum Ingot', 'Cinnbar')),
-                'slot_1_amount' => 15,
-                'slot_2' => json_encode($refinedWoods),
-                'slot_2_amount' => 3,
-                'slot_3' => json_encode($hides),
-                'slot_3_amount' => 2,
+                'slot_1' => json_encode(
+                    array(
+                        "ingredients" => array('Orichalcum Ingot', 'Cinnbar'),
+                        "amount" => 15
+                    )
+                ),
+                'slot_2' => json_encode(
+                    array(
+                        "ingredients" => array($refinedWoods),
+                        "amount" => 3
+                    )
+                ),
+                'slot_3' => json_encode(
+                    array(
+                        "ingredients" => array($hides),
+                        "amount" => 2
+                    )
+                ),
             ],
 
              // Skinning knife
              [
                 'name' => 'Iron Skinning Knife', 
                 'tier' => 2,
-                'slot_1' => json_encode(array('Fae Iron','Iron ingot')),
-                'slot_1_amount' => 7,
-                'slot_2' => json_encode($refinedWoods),
-                'slot_2_amount' => 2,
-                'slot_3' => json_encode($hides),
-                'slot_3_amount' => 1,
+                'slot_1' => json_encode(
+                    array(
+                        "ingredients" => array('Fae Iron','Iron ingot'),
+                        "amount" => 7,
+                        )
+                ),
+                'slot_2' => json_encode(
+                    array(
+                        "ingredients" => array($refinedWoods),
+                        "amount" => 2
+                    )
+                ),
+                'slot_3' => json_encode(
+                    array(
+                        "ingredients" => array($hides),
+                        "amount" => 1
+                    )
+                ),
             ],
             [
                 'name' => 'Steel Skinning Knife', 
                 'tier' => 3,
-                'slot_1' => json_encode(array('Steel Ingot', 'Voidmetal')),
-                'slot_1_amount' => 8,
-                'slot_2' => json_encode($refinedWoods),
-                'slot_2_amount' => 2,
-                'slot_3' => json_encode($hides),
-                'slot_3_amount' => 1,
+                'slot_1' => json_encode(
+                    array(
+                        "ingredients" => array('Steel Ingot', 'Voidmetal'),
+                        "amount" => 8
+                    )
+                ),
+                'slot_2' => json_encode(
+                    array(
+                        "ingredients" => array($refinedWoods),
+                        "amount" => 2
+                    )
+                ),
+                'slot_3' => json_encode(
+                    array(
+                        "ingredients" => array($hides),
+                        "amount" => 1
+                    )
+                ),
             ],
             [
                 'name' => 'Starmetal Skinning Knife', 
                 'tier' => 3,
-                'slot_1' => json_encode(array('Starmetal Ingot', 'Azurite Chunk')),
-                'slot_1_amount' => 9,
-                'slot_2' => json_encode($refinedWoods),
-                'slot_2_amount' => 2,
-                'slot_3' => json_encode($hides),
-                'slot_3_amount' => 1,
+                'slot_1' => json_encode(
+                    array(
+                        "ingredients" => array('Starmetal Ingot', 'Azurite Chunk'),
+                        "amount" => 9
+                    )
+                ),
+                'slot_2' => json_encode(
+                    array(
+                        "ingredients" => array($refinedWoods),
+                        "amount" => 2
+                    )
+                ),
+                'slot_3' => json_encode(
+                    array(
+                        "ingredients" => array($hides),
+                        "amount" => 1
+                    )
+                ),
             ],
             [
                 'name' => 'Orichalcum Skinning Knife', 
                 'tier' => 3,
-                'slot_1' => json_encode(array('Orichalcum Ingot', 'Cinnbar')),
-                'slot_1_amount' => 10,
-                'slot_2' => json_encode($refinedWoods),
-                'slot_2_amount' => 2,
-                'slot_3' => json_encode($hides),
-                'slot_3_amount' => 1,
+                'slot_1' => json_encode(
+                    array(
+                        "ingredients" => array('Orichalcum Ingot', 'Cinnbar'),
+                        "amount" => 10
+                    )
+                ),
+                'slot_2' => json_encode(
+                    array(
+                        "ingredients" => array($refinedWoods),
+                        "amount" => 2
+                    )
+                ),
+                'slot_3' => json_encode(
+                    array(
+                        "ingredients" => array($hides),
+                        "amount" => 1
+                    )
+                ),
             ],
 
              // Sickle
              [
                 'name' => 'Iron Harvesting Sickle', 
                 'tier' => 2,
-                'slot_1' => json_encode(array('Fae Iron','Iron ingot')),
-                'slot_1_amount' => 7,
-                'slot_2' => json_encode($refinedWoods),
-                'slot_2_amount' => 2,
-                'slot_3' => json_encode($hides),
-                'slot_3_amount' => 1,
+                'slot_1' => json_encode(
+                    array(
+                        "ingredients" => array('Fae Iron','Iron ingot'),
+                        "amount" => 7,
+                        )
+                ),
+                'slot_2' => json_encode(
+                    array(
+                        "ingredients" => array($refinedWoods),
+                        "amount" => 2
+                    )
+                ),
+                'slot_3' => json_encode(
+                    array(
+                        "ingredients" => array($hides),
+                        "amount" => 1
+                    )
+                ),
             ],
             [
                 'name' => 'Steel Harvesting Sickle', 
                 'tier' => 3,
-                'slot_1' => json_encode(array('Steel Ingot', 'Voidmetal')),
-                'slot_1_amount' => 8,
-                'slot_2' => json_encode($refinedWoods),
-                'slot_2_amount' => 2,
-                'slot_3' => json_encode($hides),
-                'slot_3_amount' => 1,
+                'slot_1' => json_encode(
+                    array(
+                        "ingredients" => array('Steel Ingot', 'Voidmetal'),
+                        "amount" => 8
+                    )
+                ),
+                'slot_2' => json_encode(
+                    array(
+                        "ingredients" => array($refinedWoods),
+                        "amount" => 2
+                    )
+                ),
+                'slot_3' => json_encode(
+                    array(
+                        "ingredients" => array($hides),
+                        "amount" => 1
+                    )
+                ),
             ],
             [
                 'name' => 'Starmetal Harvesting Sickle', 
                 'tier' => 3,
-                'slot_1' => json_encode(array('Starmetal Ingot', 'Azurite Chunk')),
-                'slot_1_amount' => 9,
-                'slot_2' => json_encode($refinedWoods),
-                'slot_2_amount' => 2,
-                'slot_3' => json_encode($hides),
-                'slot_3_amount' => 1,
+                'slot_1' => json_encode(
+                    array(
+                        "ingredients" => array('Starmetal Ingot', 'Azurite Chunk'),
+                        "amount" => 9
+                    )
+                ),
+                'slot_2' => json_encode(
+                    array(
+                        "ingredients" => array($refinedWoods),
+                        "amount" => 2
+                    )
+                ),
+                'slot_3' => json_encode(
+                    array(
+                        "ingredients" => array($hides),
+                        "amount" => 1
+                    )
+                ),
             ],
             [
                 'name' => 'Orichalcum Harvesting Sickle', 
                 'tier' => 3,
-                'slot_1' => json_encode(array('Orichalcum Ingot', 'Cinnbar')),
-                'slot_1_amount' => 10,
-                'slot_2' => json_encode($refinedWoods),
-                'slot_2_amount' => 2,
-                'slot_3' => json_encode($hides),
-                'slot_3_amount' => 1,
+                'slot_1' => json_encode(
+                    array(
+                        "ingredients" => array('Orichalcum Ingot', 'Cinnbar'),
+                        "amount" => 10
+                    )
+                ),
+                'slot_2' => json_encode(
+                    array(
+                        "ingredients" => array($refinedWoods),
+                        "amount" => 2
+                    )
+                ),
+                'slot_3' => json_encode(
+                    array(
+                        "ingredients" => array($hides),
+                        "amount" => 1
+                    )
+                ),
             ],
         ];
 

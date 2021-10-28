@@ -18,15 +18,10 @@ class CreateResourcesTable extends Migration
             $table->string('name')->unique();
             $table->integer('tier')->nullable();
             $table->json('slot_1')->nullable();
-            $table->integer('slot_1_amount')->nullable();
             $table->json('slot_2')->nullable();
-            $table->integer('slot_2_amount')->nullable();
             $table->json('slot_3')->nullable();
-            $table->integer('slot_3_amount')->nullable();
             $table->json('slot_4')->nullable();
-            $table->integer('slot_4_amount')->nullable();
             $table->json('slot_5')->nullable();
-            $table->integer('slot_5_amount')->nullable();
             $table->timestamps();
         });
     }
