@@ -16,10 +16,8 @@ class ResourceController extends Controller
 
     public function index(Request $request) 
     {
-        // dd(request()->route()->parameters);
-        $resources = Resource::all();
-        dd($resources);
-        return view('resource.index');
+        $resource = Resource::where('id', request()->route()->parameters["id"])->first();
+        return view('resource.index', ['resource'=>$resource]);
     }
 
     public function store()

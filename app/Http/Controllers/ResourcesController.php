@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use App\Models\Resource;
 
 class ResourcesController extends Controller
 {
     public function index() 
     {
-        $resources = DB::table('resources')->get();
+        $resources = Resource::all();
+        //DB::table('resources')->get();
 
         return view('resources.index', ['resources'=>$resources]);
     }
