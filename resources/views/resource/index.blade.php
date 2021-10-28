@@ -36,7 +36,7 @@
                                     </select>
                                 </td>
                                 <td class="w-1/4">{{ $resource->slot_1->amount }}</td>
-                                <td class="w-1/4">4.6</td>
+                                <td class="w-1/4">{{ $resource->slot_1->prices[0] }}</td>
                             </tr>
                         @endif
                     </tbody>

@@ -91,6 +91,9 @@ class ResourceSeeder extends Seeder
             ['name' => 'Orichalcum Ingot', 'tier' => 5],
             ['name' => 'Asmodeum', 'tier' => 5],
 
+            
+            ['name' => 'Voidmetal', 'tier' => 3],
+
 
             // stone n stuff
             ['name' => 'Stone', 'tier' => 1],
