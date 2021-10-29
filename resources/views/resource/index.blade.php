@@ -17,14 +17,15 @@
                 <table class="w-full table-fixed">
                     <thead class="">
                         <tr>
-                            <th class="w-1/2 text-left pl-3">Ingredient</th>
+                            <th class="w-1/2 text-left pl-1">Ingredient</th>
                             <th class="w-1/4 text-left">Amount</th>
                             <th class="w-1/4 text-left">Price</th>
                         </tr>
                     </thead>
                     <tbody class="">
                         @if ($resource->slot_1)
-                            <tr class="w-1/2">
+                        <x-slot :ingredients="$resource->slot_1->ingredients" :resource="$resource->slot_1" />
+                            <!-- <tr class="w-1/2">
                                 <td class="py-2">
                                     <select class="bg-gray-100 border-2 p-2 w-3/4 mr-4 rounded-lg" name="ingredient" required id="ingredient">
                                         @foreach($resource->slot_1->ingredients as $ingredient)
@@ -37,7 +38,7 @@
                                 </td>
                                 <td class="w-1/4">{{ $resource->slot_1->amount }}</td>
                                 <td class="w-1/4">{{ $resource->slot_1->prices[0] }}</td>
-                            </tr>
+                            </tr> -->
                         @endif
                     </tbody>
                 </table>

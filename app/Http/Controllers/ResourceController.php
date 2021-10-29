@@ -24,9 +24,20 @@ class ResourceController extends Controller
 
         foreach ($resource->slot_1->ingredients as $ingredient){
             $res = Resource::where('name', $ingredient)->first();
-            $price =  Price::where('item_id', $res->id)->first();
-            array_push($resource->slot_1->prices, intval($resource->slot_1->amount) * intval($price->price));
+            $price = null;
+            
+            if ($res !== null){
+                $price =  Price::where('item_id', $res->id)->first();
+            }
+
+            if ($price !== null) {
+                array_push($resource->slot_1->prices, intval($resource->slot_1->amount) * intval($price->price));
+            } else {
+                array_push($resource->slot_1->prices, "No price :(");
+            }
         }
+
+        
 
         // $resource->slot_2 = json_decode($resource->slot_2);
         // $resource->slot_3 = json_decode($resource->slot_3);
