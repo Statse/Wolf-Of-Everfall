@@ -11,40 +11,45 @@ use DB;
 
 class ResourceController extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware(['auth']);
-    // }
-
     public function index(Request $request) 
     {
         $resource = Resource::where('id', request()->route()->parameters["id"])->first();
-        $resource->slot_1 = json_decode($resource->slot_1);
-        $resource->slot_1->prices = array();
 
-        foreach ($resource->slot_1->ingredients as $ingredient){
-            $res = Resource::where('name', $ingredient)->first();
-            $price = null;
-            
-            if ($res !== null){
-                $price =  Price::where('item_id', $res->id)->first();
+        $slots = array(
+            json_decode($resource->slot_1),
+            json_decode($resource->slot_2),
+            json_decode($resource->slot_3),
+            json_decode($resource->slot_4),
+            json_decode($resource->slot_5),
+        );
+
+        for ($x = 0; $x < 5; $x++) {
+            if ($slots[$x] === null){
+                break;
             }
 
-            if ($price !== null) {
-                array_push($resource->slot_1->prices, intval($resource->slot_1->amount) * intval($price->price));
-            } else {
-                array_push($resource->slot_1->prices, "No price :(");
+            $slots[$x]->prices = array();
+
+            foreach ($slots[$x]->ingredients as $ingredient){
+                $res = Resource::where('name', $ingredient)->first();
+                $price = null;
+                
+                if ($res !== null){
+                    $price =  Price::where('item_id', $res->id)->first();
+                }
+
+                if ($price !== null) {
+                    array_push($slots[$x]->prices, intval($slots[$x]->amount) * intval($price->price));
+                } else {
+                    array_push($slots[$x]->prices, "No price :(");
+                }
             }
         }
 
         
 
-        // $resource->slot_2 = json_decode($resource->slot_2);
-        // $resource->slot_3 = json_decode($resource->slot_3);
-        // $resource->slot_4 = json_decode($resource->slot_4);
-        // $resource->slot_5 = json_decode($resource->slot_5);
 
-        return view('resource.index', ['resource'=>$resource]);
+        return view('resource.index', ['resource'=>$resource, 'slots'=>$slots]);
     }
 
     public function store()

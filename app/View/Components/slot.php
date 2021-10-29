@@ -6,19 +6,16 @@ use Illuminate\View\Component;
 
 class slot extends Component
 {
-    
-    public $ingredients;
-    public $resource;
+    public $items;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($ingredients, $resource)
+    public function __construct($items)
     {
-        $this->ingredients = $ingredients;
-        $this->resource = $resource;
+        $this->items = $items;
     }
 
     /**

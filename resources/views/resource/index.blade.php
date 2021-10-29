@@ -23,22 +23,8 @@
                         </tr>
                     </thead>
                     <tbody class="">
-                        @if ($resource->slot_1)
-                        <x-slot :ingredients="$resource->slot_1->ingredients" :resource="$resource->slot_1" />
-                            <!-- <tr class="w-1/2">
-                                <td class="py-2">
-                                    <select class="bg-gray-100 border-2 p-2 w-3/4 mr-4 rounded-lg" name="ingredient" required id="ingredient">
-                                        @foreach($resource->slot_1->ingredients as $ingredient)
-                                            <option value="{{ $resource->id }}">{{ $ingredient}}</option>
-                                        @endforeach
-                                        @error('ingredient')
-                                            <div class="text-red-500 mt-2 text-sm">{{$message}}</div>
-                                        @enderror
-                                    </select>
-                                </td>
-                                <td class="w-1/4">{{ $resource->slot_1->amount }}</td>
-                                <td class="w-1/4">{{ $resource->slot_1->prices[0] }}</td>
-                            </tr> -->
+                        @if ($slots[0])
+                            <x-slot :items="$slots[0]" />
                         @endif
                     </tbody>
                 </table>
